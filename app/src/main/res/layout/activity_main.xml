@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    class="androidx.appcompat.app.AlertController$RecycleListView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:layout_marginRight="10px"
+        android:layout_marginLeft="10px"
+
+        >
+
+
+        <Button
+            android:id="@+id/showScript"
+
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="showScript"
+            android:text="显示代码" />
+
+        <Button
+            android:id="@+id/execScript"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10px"
+            android:onClick="execScript"
+            android:text="执行代码" />
+
+        <Button
+            android:id="@+id/stopRun"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10px"
+            android:layout_height="wrap_content"
+            android:onClick="stopRun"
+            android:text="停止执行" />
+
+        <Button
+            android:id="@+id/clearLogView"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="clearLogView"
+            android:text="清除日志" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:layout_marginRight="10px"
+        android:layout_marginLeft="10px">
+        <Button
+            android:id="@+id/openAccessibilityService"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10px"
+            android:onClick="openAccessibilitySettingsOn"
+            android:text="开启自动化服务" />
+        <Button
+            android:id="@+id/switchFloatingWindow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10px"
+            android:onClick="switchFloatingWindow"
+            android:text="开启悬浮窗" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/scriptInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="800px"
+        android:hint="代码或地址"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/runBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="loadScript"
+        android:text="加载脚本" />
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/logView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:textIsSelectable="true">
+
+
+        </TextView>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AtTask</string>
+    <string name="accessibility_service_description">AtTask</string>
+</resources>
